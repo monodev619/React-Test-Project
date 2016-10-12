@@ -40,6 +40,7 @@ function validate(values) {
 function cityChange(value) {
     console.log(value);
 }
+
 const renderField = ({ input, label, placeholder, type, meta: { asyncValidating, touched, error } }) => (
     <div className={`form-group ${touched && error ? 'has-error' : ''}`}>
         <label className="control-label">{label}</label>
@@ -67,7 +68,6 @@ const renderSelectField = ({ input, name, options, onChange, placeholder, meta: 
 );
 
 function saveSchoolHandler(values, dispatch) {
-    console.log(values);
     return dispatch(saveSchool(values))
         .then(function (response) {
             console.log(response);

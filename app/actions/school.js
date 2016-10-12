@@ -16,9 +16,10 @@ export function changeCity(value) {
 }
 
 export function saveSchool(formValues) {
-    console.log(formValues);
+    const request = axios.post(`${ROOT_URL}/school/save`, formValues);
 
     return {
-        type: SAVE_SCHOOL
+        type: SAVE_SCHOOL,
+        payload: request
     }
 }
