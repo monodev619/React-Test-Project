@@ -6,12 +6,12 @@
 import {combineReducers} from 'redux'
 import {reducer as formReducer} from 'redux-form'
 import {routerReducer as routing} from 'react-router-redux'
-import school from './school'
+import schoolReducer from './school'
 
 const rootReducer = combineReducers({
     routing,
     form: formReducer,
-    school
+    school: schoolReducer
 });
 
 export default rootReducer

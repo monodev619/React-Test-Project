@@ -25,3 +25,5 @@ router.post('/save', function (req, res, next) {
         });
     })
 });
+
+export default router
